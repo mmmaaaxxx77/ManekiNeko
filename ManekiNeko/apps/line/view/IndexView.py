@@ -12,7 +12,7 @@ from bot.model.response import Response, ResponseModelPartialFitting
 line_bot_api = LineBotApi('EwNVmaOrfumzRmXE7S5Yh028ul5NFOxZXOvX7kr2moQp16/RgDLHcKWKDfUXGfiI/CzheL4v4VfS95qgO6mKt6D379uJoQ21kml59ik5MZcIUlW6cbG4VJSew3CjGHthkMluhg2ZKjspl8UOYyfqwQdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('0b908fe8f64b22183e2f2683823ef5ad')
 
-@login_required
+
 def index_response(request):
     if request.method == 'GET':
         sentence = request.GET['q']
