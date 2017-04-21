@@ -72,6 +72,7 @@ class Response(StateModel):
         if not self.check_running():
             return False
 
+        sentence = self.remove_symbol(sentence)
         data = self.vect.transform([sentence])
         result = self.clf.predict(data)
         return self.response[int(result[0])]
